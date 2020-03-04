@@ -48,9 +48,9 @@ def load_files(eng_path, vet_path):
 
 def save_to_audio(list_words, lang='en'):
     for word in list_words:
-        if not os.path.exists("data/audio/{}.mp3".format(word)):
+        if not os.path.exists("statics/data/audio/{}.mp3".format(word)):
             speech = gTTS(text=word, lang=lang)
-            speech.save("data/audio/{}.mp3".format(word))
+            speech.save("statics/data/audio/{}.mp3".format(word))
 
 
 def part_of_this_day():
@@ -72,34 +72,34 @@ def say_goodbye(silent):
     print("bye!")
     part_of_day = part_of_this_day()
     if part_of_day == 'midnight':
-        save_and_say("data/audio/suhi_goodbye_midnight.mp3", "It's late, take a rest, good night", silent=silent)
+        save_and_say("statics/data/audio/suhi_goodbye_midnight.mp3", "It's late, take a rest, good night", silent=silent)
     if part_of_day == 'morning':
-        save_and_say("data/audio/suhi_goodbye_morning.mp3", "weldone, have a nice day", silent=silent)
+        save_and_say("statics/data/audio/suhi_goodbye_morning.mp3", "weldone, have a nice day", silent=silent)
     if part_of_day == 'noon':
-        save_and_say("data/audio/suhi_goodbye_noon.mp3", "feel hungry?, let's get something to eat", silent=silent)
+        save_and_say("statics/data/audio/suhi_goodbye_noon.mp3", "feel hungry?, let's get something to eat", silent=silent)
     if part_of_day == 'afternoon':
-        save_and_say("data/audio/suhi_goodbye_afternoon.mp3", "you've done it so well, take some rest", silent=silent)
+        save_and_say("statics/data/audio/suhi_goodbye_afternoon.mp3", "you've done it so well, take some rest", silent=silent)
     if part_of_day == 'night':
-        save_and_say('data/audio/suhi_goodbye_night.mp3', "It's soon, but goodnight", silent=silent)
+        save_and_say('statics/data/audio/suhi_goodbye_night.mp3', "It's soon, but goodnight", silent=silent)
     if part_of_day == 'late':
-        save_and_say("data/audio/suhi_goodbye_late.mp3", "it's hard to say goodbye, anyway, have a sweet dream!", silent=silent)
+        save_and_say("statics/data/audio/suhi_goodbye_late.mp3", "it's hard to say goodbye, anyway, have a sweet dream!", silent=silent)
     exit()
 
 
 def say_hello():
     part_of_day = part_of_this_day()
     if part_of_day == 'midnight':
-        save_and_say("data/audio/suhi_hello_midnight.mp3", "Hello, it's late, take it easy.")
+        save_and_say("statics/data/audio/suhi_hello_midnight.mp3", "Hello, it's late, take it easy.")
     if part_of_day == 'morning':
-        save_and_say("data/audio/suhi_hello_morning.mp3", "Good morning, Let's have some English")
+        save_and_say("statics/data/audio/suhi_hello_morning.mp3", "Good morning, Let's have some English")
     if part_of_day == 'noon':
-        save_and_say("data/audio/suhi_hello_noon.mp3", "Well, take it fast, you have your lunch waiting")
+        save_and_say("statics/data/audio/suhi_hello_noon.mp3", "Well, take it fast, you have your lunch waiting")
     if part_of_day == 'afternoon':
-        save_and_say("data/audio/suhi_hello_afternoon.mp3", "Good afternoon.")
+        save_and_say("statics/data/audio/suhi_hello_afternoon.mp3", "Good afternoon.")
     if part_of_day == 'night':
-        save_and_say("data/audio/suhi_hello_night.mp3", "Hello, Is candy next to you, let's review what we have learnt")
+        save_and_say("statics/data/audio/suhi_hello_night.mp3", "Hello, Is candy next to you, let's review what we have learnt")
     if part_of_day == 'late':
-        save_and_say("data/audio/suhi_hello_late.mp3", "Hello, Is candy next to you, let's review what we have learnt")
+        save_and_say("statics/data/audio/suhi_hello_late.mp3", "Hello, Is candy next to you, let's review what we have learnt")
     
 
 

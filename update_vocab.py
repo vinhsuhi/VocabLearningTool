@@ -37,6 +37,7 @@ if __name__ == "__main__":
         
         if mean == "0":
             save_to_file(eng_path, vie_path, engs, viets)
+            
 
         if eng_new not in engs:
             engs.append(eng_new)
