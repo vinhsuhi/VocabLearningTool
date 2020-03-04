@@ -21,3 +21,9 @@ if you prefer voice guiding version, just type `no` when the system ask for the 
 you will be asked for name of new type of vocabulary.
 
 You can type `0` during the test to exist.
+
+# Authors
+
+Van Vinh Tong
+
+Quang Huy Nguyen
