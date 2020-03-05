@@ -38,6 +38,8 @@
 var i = 0;
 function changeWord(m){
     document.getElementById('vietnam-word').value = "";
+    document.getElementById('result-user').innerHTML = "Please insert your answer!";
+    document.getElementById('result-user').style.color = '#666';
     i += parseInt(m);
     document.getElementById('eng-dict').innerHTML = vocab[i].eng;
     // document.getElementById('vn-dict').innerHTML = vocab[i].vn;
