@@ -1,2 +1,6 @@
 flask
 flask_cors
+playsound
+gtts
+tqdm
+numpy

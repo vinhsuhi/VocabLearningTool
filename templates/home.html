@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabulary Learning Tool</title>
     <link rel='stylesheet' href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+
 </head>
+
 <body>
-    <div>Hello</div>
-    <audio class="my_audio" controls preload="none">
-        <source src="{{ url_for('static', filename='data/audio/bend.mp3') }}" type="audio/mpeg">
-    </audio>
-    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-        <main class="mdl-layout__content">
-            <div class="mdl-grid">
-                <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-                    <figure class="mdl-card__media">
-                        <img src="https://tfirdaus.github.io/mdl/images/laptop.jpg" alt="" />
-                    </figure>
-                    <div class="mdl-card__title">
-                        <h1 class="mdl-card__title-text">Learning Web Design</h1>
+    <div id="header">Vocabalulary Learning Tool</div>
+    <!-- <audio class="my_audio" controls preload="none"> -->
+    <!-- <source src="{{ url_for('static', filename='data/audio/bend.mp3') }}" type="audio/mpeg"> -->
+    <!-- </audio> -->
+    <div id="content">
+        <div class="card">
+            <input type="checkbox" class="card-visitors-indicator" />
+            <div class="header">
+                <label class="indicator" for="card-visitors-indicator">
+                    {% for word in vocabulary %}
+                    <audio class="my_audio" id='{{ word.eng }}' controls preload="none">
+                        <source src="{{ url_for('static', filename=word.audio) }}" type="audio/mpeg">
+                    </audio>
+                    {% endfor %}
+                </label>
+                <div class="content">
+                    <div class="data">
+                        <div class="top">
+                            <p class="title">Visitors</p>
+                            <p class="date">01 Sep 2016 - 15 Sep 2016</p>
+                        </div>
+                        <div class="graph">
+                            <div class="horizontal">
+                            </div>
+                            <div class="vertical">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-                    </div>
-                                    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
-        <div class="mdl-layout-spacer"></div>
-            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-                        <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-          </div>
-                </div>
-                
-                
-                
-                <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-                    <figure class="mdl-card__media">
-                        <img src="https://tfirdaus.github.io/mdl/images/html5.jpg" alt="" />
-                    </figure>
-                    <div class="mdl-card__title">
-                        <h1 class="mdl-card__title-text">Learning HTML</h1>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
-        <div class="mdl-layout-spacer"></div>
-            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-                        <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-          </div>
+                    <p class="title" id="eng-dict">{{ vocabulary[0].eng }}</p>
+                    <!-- <p class="date">15 Sep 2016</p> -->
+                    <div class="float"></div>
                 </div>
             </div>
-        </main>
+            <div class="info">
+                <!-- <p>
+                    <input type="text" name="vn-word" id="vietnam-word">
+                </p> -->
+                <p class="counter" id="vn-dict">{{ vocabulary[0].vn }}<span class="unit"></span></p>
+                <button onclick="nextToWord()" class="btn">Next</button>
+            </div>
+            
+        </div>
     </div>
+
 </body>
+<script>
+    var vocab = {{ vocabulary | safe }};
+</script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/tool.js') }}"></script>
+
 </html>
