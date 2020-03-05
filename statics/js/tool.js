@@ -54,7 +54,7 @@ function changeWord(m){
 }
 
 function checkWord(w){
-    console.log(vocab[i].vn);
+    // console.log(vocab[i].vn);
     document.getElementById('result-user').innerHTML = (w == vocab[i].vn) ? 'Good' : 'Vinh Oc Cho';
     document.getElementById('result-user').style.color = (w == vocab[i].vn) ? '#2FB45A' : '#DB1430';
 }
