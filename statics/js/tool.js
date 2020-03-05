@@ -36,10 +36,11 @@
 //             `
 //     });
 var i = 0;
-function nextToWord(){
-    i++;
+function changeWord(m){
+    document.getElementById('vietnam-word').value = "";
+    i += parseInt(m);
     document.getElementById('eng-dict').innerHTML = vocab[i].eng;
-    document.getElementById('vn-dict').innerHTML = vocab[i].vn;
+    // document.getElementById('vn-dict').innerHTML = vocab[i].vn;
     // document.getElementById('audio-dict').setAttribute("src",'/static' + vocab[i].audio);
     var audios = document.getElementsByTagName('audio');
     var a;
@@ -48,4 +49,10 @@ function nextToWord(){
     }
     document.getElementById(vocab[i].eng).style.display = "";
 
+}
+
+function checkWord(w){
+    console.log(vocab[i].vn);
+    document.getElementById('result-user').innerHTML = (w == vocab[i].vn) ? 'Good' : 'Vinh Oc Cho';
+    document.getElementById('result-user').style.color = (w == vocab[i].vn) ? '#2FB45A' : '#DB1430';
 }

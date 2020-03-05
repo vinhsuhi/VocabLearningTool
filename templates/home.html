@@ -45,11 +45,19 @@
                 </div>
             </div>
             <div class="info">
-                <!-- <p>
-                    <input type="text" name="vn-word" id="vietnam-word">
-                </p> -->
-                <p class="counter" id="vn-dict">{{ vocabulary[0].vn }}<span class="unit"></span></p>
-                <button onclick="nextToWord()" class="btn">Next</button>
+                <div>
+                    <div style="padding-bottom: 6px;">
+                        <input type="text" name="vn-word" id="vietnam-word" oninput="checkWord(this.value)">
+                    </div>
+                    <div id="result-user">
+                        Please enter your answer...
+                    </div>
+                </div>
+                <!-- <p class="counter" id="vn-dict">{{ vocabulary[0].vn }}<span class="unit"></span></p> -->
+                <div style="display: grid; grid-template-columns: 40% 40%;grid-gap: 10px;">
+                    <button onclick="changeWord(-1)" class="btn">Prev</button>
+                    <button onclick="changeWord(1)" class="btn">Next</button>
+                </div>
             </div>
             
         </div>
