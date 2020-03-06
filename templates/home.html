@@ -16,6 +16,12 @@
     <!-- <source src="{{ url_for('static', filename='data/audio/bend.mp3') }}" type="audio/mpeg"> -->
     <!-- </audio> -->
     <div id="content">
+        <div style="padding: 20px 30px;text-align: center;">
+            <input id="toggle-on" onclick="changeLanguage(true)" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+            <label for="toggle-on" class="btn-toggle">eng</label>
+            <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+            <label for="toggle-off" onclick="changeLanguage(false)" class="btn-toggle">vn</label>
+        </div>
         <div class="card">
             <input type="checkbox" class="card-visitors-indicator" />
             <div class="header">
@@ -47,10 +53,10 @@
             <div class="info">
                 <div>
                     <div style="padding-bottom: 6px;">
-                        <input type="text" name="vn-word" id="vietnam-word" oninput="checkWord(this.value)">
+                        <input type="text" name="vn-word" id="vietnam-word" onkeydown="checkWord(event,this.value)">
                     </div>
                     <div id="result-user">
-                        Please enter your answer...
+                        <!-- Please enter your answer -->
                     </div>
                 </div>
                 <!-- <p class="counter" id="vn-dict">{{ vocabulary[0].vn }}<span class="unit"></span></p> -->
@@ -59,7 +65,10 @@
                     <button onclick="changeWord(1)" class="btn">Next</button>
                 </div>
             </div>
-            
+
+        </div>
+        <div style="padding:  20px 30px;text-align: center;">
+            <button onclick="alertAwswer()" class="btn-toggle" style="padding: 6px;width: 60px; background-color: #1a1a1a;color: #fff;">Help</button>
         </div>
     </div>
 

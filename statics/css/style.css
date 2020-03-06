@@ -1,5 +1,5 @@
 body {
-  background-color: #45B98F;
+  background-color: #45b98f;
   margin: 0;
   height: 100%;
   font-family: "Open Sans", Helvetica, sans-serif;
@@ -7,7 +7,7 @@ body {
 }
 
 #header {
-  background-color: #5F5CF1;
+  background-color: #5f5cf1;
   height: 2em;
   padding-top: 20px;
   text-align: center;
@@ -20,423 +20,408 @@ body {
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin-ext";
 
 * {
-	z-index: 0;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 html {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-	font-family: "Roboto", sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 20px;
-	color: #212121;
-	background-color: #212121;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #212121;
+  background-color: #212121;
 }
 
 .indicator {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .card {
-	background-color: #ffffff;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-	border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
 }
 
 .reference {
-	position: absolute;
-	width: auto;
-	height: 60px;
-	padding: 20px 10px;
-	margin: calc((100vh - 400px) / 2);
-	font-weight: 500;
+  position: absolute;
+  width: auto;
+  height: 60px;
+  padding: 20px 10px;
+  margin: calc((100vh - 400px) / 2);
+  font-weight: 500;
 }
 
 .reference a {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 .card {
-	position: relative;
-	width: 300px;
-	height: 400px;
-	margin: calc((100vh - 400px) / 2) auto;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 50px calc((100vh - 400px) / 2) auto;
 }
 
 .card input[type="checkbox"].card-visitors-indicator {
-	display: none;
+  display: none;
 }
 
 .card
-	input[type="checkbox"].card-visitors-indicator:checked
-	+ .header
-	label.indicator {
-	top: 30%;
-	right: calc(50% - 25px);
-	margin: calc(-30% - 25px) calc(50% - 25px) 0 0;
-	background-color: transparent;
-	-webkit-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
-		margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-moz-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
-		margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-o-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
-		margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-ms-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
-		margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
-		margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  input[type="checkbox"].card-visitors-indicator:checked
+  + .header
+  label.indicator {
+  top: 30%;
+  right: calc(50% - 25px);
+  margin: calc(-30% - 25px) calc(50% - 25px) 0 0;
+  background-color: transparent;
+  -webkit-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
+    margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -moz-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
+    margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -o-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
+    margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -ms-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
+    margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-color 0s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
+    margin 0s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
 }
 
 .card
-	input[type="checkbox"].card-visitors-indicator:checked
-	+ .header
-	label.indicator
-	.open {
-	opacity: 0;
-	-webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-	-moz-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-	-o-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-	-ms-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-	transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  input[type="checkbox"].card-visitors-indicator:checked
+  + .header
+  label.indicator
+  .open {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  -moz-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  -o-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  -ms-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
 
 .card
-	input[type="checkbox"].card-visitors-indicator:checked
-	+ .header
-	label.indicator
-	.close {
-	transform: scale(1);
-	-webkit-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-moz-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-o-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-ms-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  input[type="checkbox"].card-visitors-indicator:checked
+  + .header
+  label.indicator
+  .close {
+  transform: scale(1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -moz-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -o-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -ms-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
 }
 
 .card
-	input[type="checkbox"].card-visitors-indicator:checked
-	+ .header
-	.content
-	.data {
-	opacity: 1;
-	-webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	-moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	-o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	-ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  input[type="checkbox"].card-visitors-indicator:checked
+  + .header
+  .content
+  .data {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
 }
 
 .card
-	input[type="checkbox"].card-visitors-indicator:checked
-	+ .header
-	.content
-	.data
-	.graph
-	.vertical
-	.day
-	.line-container {
-	max-height: 80%;
-	-webkit-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-moz-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-o-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	-ms-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
-	transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  input[type="checkbox"].card-visitors-indicator:checked
+  + .header
+  .content
+  .data
+  .graph
+  .vertical
+  .day
+  .line-container {
+  max-height: 80%;
+  -webkit-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -moz-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -o-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  -ms-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
 }
 
 .card
-	input[type="checkbox"].card-visitors-indicator:checked
-	+ .header
-	.content
-	.float {
-	opacity: 1;
-	transform: scale(10);
-	-webkit-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	-moz-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	-o-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	-ms-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  input[type="checkbox"].card-visitors-indicator:checked
+  + .header
+  .content
+  .float {
+  opacity: 1;
+  transform: scale(10);
+  -webkit-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -moz-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -o-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -ms-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
 .card .header {
-	width: 100%;
-	height: 60%;
-	background-color: #C0392b;
+  width: 100%;
+  height: 60%;
+  background-color: #c0392b;
 }
 
 .card .header label.indicator {
-	position: absolute;
-	z-index: 1;
-	width: 50px;
-	height: 50px;
-	top: calc(60% - 25px);
-	right: 20px;
-	margin: 0;
-	border-radius: 100%;
-	background-color: #ff9800;
-	-webkit-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	-moz-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	-o-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	-ms-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-	transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-		background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  top: calc(60% - 25px);
+  right: 20px;
+  margin: 0;
+  border-radius: 100%;
+  background-color: #ff9800;
+  -webkit-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -moz-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -o-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -ms-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    margin 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
 .card .header label.indicator .open {
-	position: absolute;
-	margin: 11.5px 16px;
-	opacity: 1;
-	-webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	-moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	-o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	-ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-	transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  position: absolute;
+  margin: 11.5px 16px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
 }
 
 .card .header label.indicator .close {
-	margin: 12.5px 17.5px;
-	transform: scale(0);
-	-webkit-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-moz-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-o-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-ms-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  margin: 12.5px 17.5px;
+  transform: scale(0);
+  -webkit-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -moz-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -o-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -ms-transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .card .header .content {
-	position: relative;
-	width: 100%;
-	height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .card .header .content > * {
-	color: #ffffff;
-	font-weight: 500;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .card .header .content .data {
-	position: absolute;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	background-color: #ff9800;
-	-webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #ff9800;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -o-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -ms-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .card .header .content .data .top {
-	width: 100%;
-	height: 40%;
+  width: 100%;
+  height: 40%;
 }
 
 .card .header .content .data .top .title {
-	width: 100%;
+  width: 100%;
 }
 
 .card .header .content .data .graph {
-	position: relative;
-	width: calc(100% - 40px);
-	height: 60%;
-	margin: 0 20px 20px 20px;
+  position: relative;
+  width: calc(100% - 40px);
+  height: 60%;
+  margin: 0 20px 20px 20px;
 }
 
 .card .header .content .data .graph .horizontal {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .card .header .content .data .graph .horizontal div {
-	height: 20%;
+  height: 20%;
 }
 
 .card .header .content .data .graph .horizontal div hr {
-	border: 1px solid #ffffff;
-	opacity: 0.5;
+  border: 1px solid #ffffff;
+  opacity: 0.5;
 }
 
 .card .header .content .data .graph .horizontal div p {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 .card .header .content .data .graph .vertical {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-moz-box-direction: normal;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	position: absolute;
-	width: 90%;
-	height: 100%;
-	top: 0;
-	margin-left: 10%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  margin-left: 10%;
 }
 
 .card .header .content .data .graph .vertical .day {
-	position: relative;
-	width: calc(100% / 14);
-	height: 100%;
+  position: relative;
+  width: calc(100% / 14);
+  height: 100%;
 }
 
-.card
-	.header
-	.content
-	.data
-	.graph
-	.vertical
-	.day
-	.line-container {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-moz-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-moz-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	justify-content: flex-end;
-	position: absolute;
-	width: 2px;
-	height: 80%;
-	max-height: 0;
-	bottom: 20%;
-	margin: 0 calc((100% - 2px) / 2);
-	-webkit-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-moz-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-o-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-ms-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+.card .header .content .data .graph .vertical .day .line-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  max-height: 0;
+  bottom: 20%;
+  margin: 0 calc((100% - 2px) / 2);
+  -webkit-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -moz-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -o-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -ms-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
-.card
-	.header
-	.content
-	.data
-	.graph
-	.vertical
-	.day
-	.line-container
-	.line {
-	width: 100%;
-	background-color: #ffffff;
+.card .header .content .data .graph .vertical .day .line-container .line {
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .card .header .content .data .graph .vertical .day p {
-	position: absolute;
-	height: 20%;
-	bottom: 0;
-	opacity: 0.5;
+  position: absolute;
+  height: 20%;
+  bottom: 0;
+  opacity: 0.5;
 }
 
 .card .header .content .data .graph .vertical .day .hidden {
-	opacity: 0;
+  opacity: 0;
 }
 
 .card .header .content .title {
-	margin-top: 15px;
-	font-size: 25px;
-	line-height: 30px;
-	text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .card .header .content .date {
-	width: 100%;
-	opacity: 0.5;
-	text-align: center;
+  width: 100%;
+  opacity: 0.5;
+  text-align: center;
 }
 
 .card .header .content .float {
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	top: 50%;
-	right: calc(50% - 25px);
-	opacity: 0;
-	border-radius: 100%;
-	background-color: #ff9800;
-	-webkit-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-moz-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-o-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	-ms-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  right: calc(50% - 25px);
+  opacity: 0;
+  border-radius: 100%;
+  background-color: #ff9800;
+  -webkit-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -moz-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -o-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -ms-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    opacity 0s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .card .info {
-	width: calc(100% - 40px);
-	height: calc(40% - 80px);
-	padding: 30px 10px 30px 10px;
-	color: #9e9e9e;
+  width: calc(100% - 40px);
+  height: calc(40% - 80px);
+  padding: 30px 10px 30px 10px;
+  color: #9e9e9e;
 }
 
 .card .info .counter {
-	margin-top: 8px;
-	color: #212121;
-	font-size: 25px;
-	font-weight: 400;
-	line-height: 40px;
+  margin-top: 8px;
+  color: #212121;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .card .info .counter .unit {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 .btn {
   width: inherit;
-  background-color: #DB1430; /* Green */
+  background-color: #db1430; /* Green */
   border: none;
   color: white;
   padding: 6px 10px;
@@ -462,3 +447,75 @@ input {
   padding: 8px 0px;
 }
 
+#content {
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+  /* text-align: center; */
+}
+
+/* body, html {
+	background: #efefef;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+			align-items: center;
+	min-height: 100%;
+	z-index: -1;
+  } */
+
+.btn-toggle {
+  border: 1px solid #aaa;
+  color: #aaa;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: background 600ms ease, color 600ms ease;
+  transition: background 600ms ease, color 600ms ease;
+}
+
+input[type="radio"].toggle {
+  display: none;
+}
+input[type="radio"].toggle + label {
+  cursor: pointer;
+  min-width: 60px;
+}
+input[type="radio"].toggle + label:hover {
+  background: none;
+  color: #ffff;
+}
+input[type="radio"].toggle + label:after {
+  background: #ff9800;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 100%;
+  z-index: -1;
+}
+input[type="radio"].toggle.toggle-left + label {
+  border-right: 0;
+}
+input[type="radio"].toggle.toggle-left + label:after {
+  left: 100%;
+}
+input[type="radio"].toggle.toggle-right + label {
+  margin-left: -5px;
+}
+input[type="radio"].toggle.toggle-right + label:after {
+  left: -100%;
+}
+input[type="radio"].toggle:checked + label {
+  cursor: default;
+  color: #fff;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+input[type="radio"].toggle:checked + label:after {
+  left: 0;
+}

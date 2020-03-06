@@ -35,13 +35,25 @@
 //             </div>
 //             `
 //     });
-var i = 0;
+// const language = {
+//     ENG : true,
+//     VN : false
+// }
+
+var i = 0,eng=vocab[0].eng,vn=vocab[0].vn,lang=true;
+
+function changeLanguage(lan){
+    lang = lan;
+    changeWord(0);
+}
+
 function changeWord(m){
     document.getElementById('vietnam-word').value = "";
-    document.getElementById('result-user').innerHTML = "Please insert your answer!";
-    document.getElementById('result-user').style.color = '#666';
+    document.getElementById('result-user').innerHTML = "";
     i += parseInt(m);
-    document.getElementById('eng-dict').innerHTML = vocab[i].eng;
+    eng = vocab[i].eng;
+    vn = vocab[i].vn;
+    document.getElementById('eng-dict').innerHTML = lang ? eng : vn;
     // document.getElementById('vn-dict').innerHTML = vocab[i].vn;
     // document.getElementById('audio-dict').setAttribute("src",'/static' + vocab[i].audio);
     var audios = document.getElementsByTagName('audio');
@@ -53,8 +65,18 @@ function changeWord(m){
 
 }
 
-function checkWord(w){
-    // console.log(vocab[i].vn);
-    document.getElementById('result-user').innerHTML = (w == vocab[i].vn) ? 'Good' : 'Vinh Oc Cho';
-    document.getElementById('result-user').style.color = (w == vocab[i].vn) ? '#2FB45A' : '#DB1430';
+function alertAwswer(){
+    let answer = lang ? vn : eng;
+    alert(answer);
+}
+
+function checkWord(event,w){
+    let answer = lang ? vn : eng;
+    console.log(lang,answer);
+    if(event.keyCode==13){
+        document.getElementById('result-user').innerHTML = (w == answer) ? 'Good' : 'Oh no :(';
+        document.getElementById('result-user').style.color = (w == answer) ? '#2FB45A' : '#DB1430';
+    } else {
+        document.getElementById('result-user').innerHTML = "";
+    }
 }
