@@ -4,5 +4,6 @@ from services import LoadData
 
 @app.route('/')
 def goHome():
-   vocabulary = LoadData.getData('Destination_B2_unit2')
+   fileName = request.args.get('filename')
+   vocabulary = LoadData.getData(fileName)
    return render_template('home.html',vocabulary=vocabulary)
