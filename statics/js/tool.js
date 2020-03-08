@@ -54,7 +54,6 @@ function changeWord(m){
     // console.log("vinhsuhi");
     if(i >= vocab.length){
         i = vocab.length - 1;
-
     }
     if(i < 0){
         i = 0;
@@ -72,10 +71,6 @@ function changeWord(m){
         audios[a].style.display = "none";
     }
     document.getElementById(vocab[i].eng).style.display = "";
-    if(i == vocab.length - 1){
-        alertFinish();
-    }
-
 }
 
 function alertAwswer(){
@@ -103,6 +98,9 @@ function checkWord(event,w){
         }
         else{
             audios[i].play();
+        }
+        if(i == vocab.length){
+            alertFinish();
         }
     }
     else{
