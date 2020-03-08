@@ -12,18 +12,8 @@
 
 <body>
     <div id="header">Vocabalulary Learning Tool</div>
-    <!-- <audio class="my_audio" controls preload="none"> -->
-    <!-- <source src="{{ url_for('static', filename='data/audio/bend.mp3') }}" type="audio/mpeg"> -->
-    <!-- </audio> -->
     <div id="content">
-        <div style="padding: 20px 30px;text-align: center;">
-            <input id="toggle-on" onclick="changeLanguage(true)" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-            <label for="toggle-on" class="btn-toggle">eng</label>
-            <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-            <label for="toggle-off" onclick="changeLanguage(false)" class="btn-toggle">vn</label>
-        </div>
         <div class="card">
-            <input type="checkbox" class="card-visitors-indicator" />
             <div class="header">
                 <label class="indicator" for="card-visitors-indicator">
                     {% for word in vocabulary %}
@@ -33,23 +23,23 @@
                     {% endfor %}
                 </label>
                 <div class="content">
-                    <div class="data">
-                        <div class="top">
-                            <p class="title">Visitors</p>
-                            <p class="date">01 Sep 2016 - 15 Sep 2016</p>
-                        </div>
-                        <div class="graph">
-                            <div class="horizontal">
-                            </div>
-                            <div class="vertical">
-                            </div>
-                        </div>
-                    </div>
                     <p class="title" id="eng-dict">{{ vocabulary[0].eng }}</p>
-                    <!-- <p class="date">15 Sep 2016</p> -->
-                    <div class="float"></div>
+                    
+                    <div style="padding: 20px 30px;text-align: center;">
+                        <input id="toggle-on" onclick="changeLanguage(true)" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                        <label for="toggle-on" class="btn-toggle">eng</label>
+
+                        <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                        <label for="toggle-off" onclick="changeLanguage(false)" class="btn-toggle">vn</label>
+                    </div>
+
+                    <div style="padding:  20px 30px;text-align: center;">
+                        <button onclick="alertAwswer()" class="btn-toggle" style="padding: 6px;width: 60px; background-color: #1a1a1a;color: #fff;">Help</button>
+                    </div>
+
                 </div>
             </div>
+
             <div class="info">
                 <div>
                     <div style="padding-bottom: 6px;">
@@ -59,16 +49,11 @@
                         <!-- Please enter your answer -->
                     </div>
                 </div>
-                <!-- <p class="counter" id="vn-dict">{{ vocabulary[0].vn }}<span class="unit"></span></p> -->
                 <div style="display: grid; grid-template-columns: 40% 40%;grid-gap: 10px;">
                     <button onclick="changeWord(-1)" class="btn">Prev</button>
                     <button onclick="changeWord(1)" class="btn">Next</button>
                 </div>
             </div>
-
-        </div>
-        <div style="padding:  20px 30px;text-align: center;">
-            <button onclick="alertAwswer()" class="btn-toggle" style="padding: 6px;width: 60px; background-color: #1a1a1a;color: #fff;">Help</button>
         </div>
     </div>
 

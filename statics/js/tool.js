@@ -51,6 +51,16 @@ function changeWord(m){
     document.getElementById('vietnam-word').value = "";
     document.getElementById('result-user').innerHTML = "";
     i += parseInt(m);
+    // console.log("vinhsuhi");
+    if(i >= vocab.length){
+        i = vocab.length - 1;
+
+    }
+    if(i < 0){
+        i = 0;
+    }
+    console.log(i);
+
     eng = vocab[i].eng;
     vn = vocab[i].vn;
     document.getElementById('eng-dict').innerHTML = lang ? eng : vn;
@@ -62,21 +72,40 @@ function changeWord(m){
         audios[a].style.display = "none";
     }
     document.getElementById(vocab[i].eng).style.display = "";
+    if(i == vocab.length - 1){
+        alertFinish();
+    }
 
 }
 
 function alertAwswer(){
     let answer = lang ? vn : eng;
     alert(answer);
+    // var dialog = $(foo).dialog('open');
+    // setTimeout(function() { dialog.dialog('close'); }, 3);
 }
+
+
+function alertFinish(){
+    alert("Your Test is Finished!");
+}
+
 
 function checkWord(event,w){
     let answer = lang ? vn : eng;
-    console.log(lang,answer);
     if(event.keyCode==13){
-        document.getElementById('result-user').innerHTML = (w == answer) ? 'Good' : 'Oh no :(';
+        document.getElementById('result-user').innerHTML = (w == answer) ? 'Good' : 'try again';
         document.getElementById('result-user').style.color = (w == answer) ? '#2FB45A' : '#DB1430';
-    } else {
+        var audios = document.getElementsByTagName('audio');
+        if(w == answer){
+            audios[i].play();
+            changeWord(1);
+        }
+        else{
+            audios[i].play();
+        }
+    }
+    else{
         document.getElementById('result-user').innerHTML = "";
     }
 }
