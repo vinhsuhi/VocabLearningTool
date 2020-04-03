@@ -30,11 +30,10 @@ measure,method,solution,way,policy
 experience,enjoy,suffer
 difficulty,issue,problem,burden,liability
 tourist,traveler,visitor
-consequently,hence,thus
+consequently,hence,thus, therefore
 should,need to
 recommend,advise,suggest
 preserve,conserve,reserve,maintain,protect
-therefore,thus,hence
 replace,substitute
 a lot of,a significant amount,number of
 celebrity,famous person,household names
