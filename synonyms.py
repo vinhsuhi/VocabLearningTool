@@ -31,6 +31,10 @@ def load_synonyms(data_path, path_v=""):
     file.close()
     return datas, words, means
 
+def preprocess_text(string):
+    string = string.lower().strip()
+    return string
+
 
 if __name__ == "__main__":
     import argparse
@@ -58,8 +62,14 @@ if __name__ == "__main__":
 
     BatchSize = 9
     NumBatch = int(len(datas_total) / BatchSize)
-    if len(datas_total) % NumBatch == 0:
-        NumBatch += 1
+    print(NumBatch)
+    if NumBatch > 0:
+        lol = len(datas_total) % BatchSize
+        if lol > 0:
+            NumBatch += 1
+    else:
+        NumBatch = 1
+    print("Num batchs: {}".format(NumBatch))
     for i in tqdm(range(NumBatch)):
         next = False
         datas = datas_total[i * BatchSize : (i+1) * BatchSize]
@@ -77,15 +87,17 @@ if __name__ == "__main__":
                 while len(last) > 0:
                     print("You have {} words to list!".format(len(last)))
                     word = input("Which words can be used to paraphrase for '{}' (0 to exit, 1 to pass, 2 to show mean, 3 to pronounce, 4 to next batch): ".format(first))
+                    word = preprocess_text(word)
                     if word == '0':
                         say_goodbye(False)
-                    if word == '1':
+                    if '1' in word:
                         print("Those words are: ")
                         print(last)
                         print("MEAN: {}".format(means[k]))
                         for ans in last:
                             print(ans)
-                            playsound("{}{}.mp3".format(sound_prefix_path, ans))
+                            if word == '11':
+                                playsound("{}{}.mp3".format(sound_prefix_path, ans))
                         break
 
                     if word == '2':
@@ -105,7 +117,7 @@ if __name__ == "__main__":
                             pass
                         last.remove(word)
                 
-                if word != '1':
+                if '1' not in word:
                     print("MEAN: {}".format(means[k]))
                     print("You are totally right!")
                 print()
