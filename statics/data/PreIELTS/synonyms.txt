@@ -39,7 +39,7 @@ a lot of,a significant amount,number of
 celebrity,famous person,household names
 productivity,performance,efficiency
 disclose,reveal
-marvellous,incredible
+marvelous,incredible
 country,nation
 opportunity,prospect
 short-sightedness,myopia
@@ -112,7 +112,7 @@ employer,business owner
 charity,humanitarian
 manage,supervise,control
 occur,happen
-children,juveniles,peers
+children,juveniles,peers,future generations
 imprisonment,life sentence
 capital punishment,death sentence
 suitable,appropriate
@@ -214,3 +214,16 @@ affordability,budget friendly
 drop,fall,decline
 severe,serious,harsh
 cardiopathy,heart attack
+develop,flourish
+imagination,abstract thinking
+skills,ability 
+language skills,linguistic ability
+meaningless,unfulfilling
+work (N), occupation, profession
+spend,allocate
+care for,take care of
+any,every
+be required to,must to 
+bad for,defect
+realistic,pragmatic
+online class, digital class
