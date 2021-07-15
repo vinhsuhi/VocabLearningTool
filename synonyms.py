@@ -48,7 +48,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     prefix = args.prefix
-    path = "statics/data/SPEAKING/{}_complex.txt".format(prefix)
+    files = os.listdir("statics/data/SPEAKING/")
+    for ele in files:
+        if prefix in ele:
+            path = "statics/data/SPEAKING/{}".format(ele)
+    # 
+    # path = "statics/data/SPEAKING/{}_complex.txt".format(prefix)
     path_v = "statics/data/SPEAKING/{}_simple.txt".format(prefix)
     # path_v = 'statics/data/PreIELTS/synonyms_v.txt'
     datas_total, words, means_total = load_synonyms(path, path_v)
@@ -57,7 +62,7 @@ if __name__ == "__main__":
     # datas_total = [datas_total[index] for index in shuffle_index]
     # means_total = [means_total[index] for index in shuffle_index]
     print("Saving audio files...")
-    save_to_audio(words, 'en')
+    # save_to_audio(words, 'en')
     print("DONE!")
 
     BatchSize = 9
@@ -96,26 +101,29 @@ if __name__ == "__main__":
                         print("MEAN: {}".format(means[k]))
                         for ans in last:
                             print(ans)
-                            if word == '11':
-                                playsound("{}{}.mp3".format(sound_prefix_path, ans))
+                            # if word == '11':
+                            #     playsound("{}{}.mp3".format(sound_prefix_path, ans))
                         break
 
                     if word == '2':
                         print("MEAN: {}".format(means[k]))
                     
-                    if word == '3':
-                        playsound("{}{}.mp3".format(sound_prefix_path, first))
+                    # if word == '3':
+                    #     playsound("{}{}.mp3".format(sound_prefix_path, first))
                     
                     if word == '4':
                         next = True
                         break
 
-                    if word in last:
-                        try:
-                            playsound("{}{}.mp3".format(sound_prefix_path, word))
-                        except:
-                            pass
-                        last.remove(word)
+                    for w in last:
+                        if (word in w and len(word) > 7) or (word == w):
+                            print(w)
+                            # try:
+                            #     playsound("{}{}.mp3".format(sound_prefix_path, word))
+                            # except:
+                            #     pass
+                            last.remove(w)
+                            break
                 
                 if '1' not in word:
                     print("MEAN: {}".format(means[k]))

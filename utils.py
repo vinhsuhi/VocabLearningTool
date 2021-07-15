@@ -75,13 +75,14 @@ def part_of_this_day():
 
 def say_goodbye(silent):
     print("bye!")
+    exit()
     part_of_day = part_of_this_day()
     if part_of_day == 'midnight':
         save_and_say("statics/data/audio/suhi_goodbye_midnight.mp3", "It's late, take a rest, good night", silent=silent)
     if part_of_day == 'morning':
         save_and_say("statics/data/audio/suhi_goodbye_morning.mp3", "weldone, have a nice day", silent=silent)
     if part_of_day == 'noon':
-        save_and_say("statics/data/audio/suhi_goodbye_noon.mp3", "feel hungry?, let's get something to eat", silent=silent)
+        save_and_say("statics/data/audio/suhi_goodbye_noon.mp3", "feel hungry?, let's get st to eat", silent=silent)
     if part_of_day == 'afternoon':
         save_and_say("statics/data/audio/suhi_goodbye_afternoon.mp3", "you've done it so well, take some rest", silent=silent)
     if part_of_day == 'night':

@@ -4,9 +4,9 @@ knowledge, know-how
 take an exam, sit an exam
 pass an exam, sail through an exam
 do not pass an exam, fail an exam
-learning result, accademic performance
-outstanding, exellent accademic performance
-classmate, accademic partner
+learning result, academic performance
+outstanding, excellent academic performance
+classmate, academic partner
 bad, poor
 try to, try my best to, do everything in my power to
 i want to improve, i want to put st to maximum
